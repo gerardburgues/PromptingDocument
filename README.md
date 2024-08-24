@@ -23,8 +23,8 @@ This is a Streamlit application that allows you to test GPT prompts with basic c
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/gpt-prompt-testing-app.git
-   cd gpt-prompt-testing-app
+   git clone https://github.com/gerardburgues/PromptingDocument.git
+   cd PromptingDocument
    ```
 
 2. Install the required packages:
