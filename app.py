@@ -105,6 +105,8 @@ st.markdown(
 
 """
 )
+user_token = st.text_area("Enter your openai token here")
+
 upload_dir = "files/"
 
 # Ensure the upload directory exists
@@ -138,7 +140,6 @@ if uploaded_file is not None:
 
 # Text input
 user_text = st.text_area("Enter your text here")
-user_token = st.text_area("Enter your openai token here")
 # Submit button
 if st.button("Submit"):
     if selected_file and user_text:
