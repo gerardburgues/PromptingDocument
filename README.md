@@ -4,7 +4,7 @@ This is a Streamlit application that allows you to test GPT prompts with basic c
 
 ## Features
 
-- Upload and process PDF, CSV, and text files.
+- Upload and process PDF
 - Convert PDF content to markdown format with metadata.
 - Provide a prompt and get a GPT-generated response using the content from the uploaded file.
 - Manage uploaded files: select, view, and delete them.
