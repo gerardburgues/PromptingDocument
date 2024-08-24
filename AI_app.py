@@ -14,12 +14,10 @@ import os
 
 
 class OpenAIApp:
-    def __init__(self):
+    def __init__(self, user_token):
         load_dotenv()  # Load environment variables from .env file
 
-        self.OPENAI_API_KEY = os.getenv(
-            "OPENAI_KEY"
-        )  # Replace with your actual API key
+        self.OPENAI_API_KEY = user_token  # Replace with your actual API key
 
     def start_gpt_process(
         self,

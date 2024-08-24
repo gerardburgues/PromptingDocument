@@ -55,14 +55,14 @@ def save_uploaded_file(uploaded_file):
     return uploaded_file.name
 
 
-def process_file_and_text(uploaded_file, user_text):
+def process_file_and_text(uploaded_file, user_text, user_token):
     st.write("Processing the file and text...")
 
     if uploaded_file is not None:
         # saved_path = save_uploaded_file(uploaded_file)
         pages = pdf_to_markdown_with_metadata(uploaded_file)
         # Call openai
-        process_openai = OpenAIApp()
+        process_openai = OpenAIApp(user_token)
         openai_answer = process_openai.start_gpt_process(user_text, pages)
         st.write(f"Answer GPT: {openai_answer}")
     else:
@@ -138,10 +138,12 @@ if uploaded_file is not None:
 
 # Text input
 user_text = st.text_area("Enter your text here")
-
+user_token = st.text_area("Enter your openai token here")
 # Submit button
 if st.button("Submit"):
     if selected_file and user_text:
-        process_file_and_text(os.path.join(upload_dir, selected_file), user_text)
+        process_file_and_text(
+            os.path.join(upload_dir, selected_file), user_text, user_token
+        )
     else:
         st.warning("Please select a file and enter some text before submitting.")

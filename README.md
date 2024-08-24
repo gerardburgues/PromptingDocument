@@ -29,13 +29,13 @@ This is a Streamlit application that allows you to test GPT prompts with basic c
 
 2. Install the required packages:
 
-   ```bash pip install -r requirements.txt
+   ```pip install -r requirements.txt
 
    ```
 
 3. Set up the environment variables:
 
-   ```bash OPENAI_KEY=your_openai_api_key_here
+   ```OPENAI_KEY=your_openai_api_key_here
 
    ```
 
