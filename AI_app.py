@@ -32,7 +32,7 @@ class OpenAIApp:
         )
         model = ChatOpenAI(
             model="gpt-4o-mini",
-            temperature=0,
+            temperature=0.5,
             openai_api_key=self.OPENAI_API_KEY,
         )
 
